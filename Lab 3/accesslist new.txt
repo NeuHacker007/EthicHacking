@@ -1,0 +1,12 @@
+access-list 120 deny tcp 10.13.13.100 255.255.255.0 host 10.7.7.25 eq www
+access-list 120 deny tcp 10.11.11.100 255.255.255.0 host 10.7.7.8 eq www
+access-list 120 permit tcp 10.11.11.100 255.255.255.0 host 10.7.7.18 eq pop3
+access-list 120 permit tcp 10.11.11.100 255.255.255.0 host 10.7.7.18 eq smtp
+access-list 120 permit icmp any any
+access-list 120 permit tcp any any eq www
+access-list 120 permit udp any any eq domain
+access-list 120 permit udp any eq domain any
+access-list 120 permit tcp any eq www any
+access-list 120 permit udp any eq bootpc any eq bootps
+access-list 120 permit udp any eq bootps any eq bootpc
+access-list 120 deny ip any any
